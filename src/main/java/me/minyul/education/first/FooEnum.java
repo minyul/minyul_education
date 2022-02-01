@@ -1,6 +1,7 @@
 package me.minyul.education.first;
 
 import java.util.function.BiFunction;
+import java.util.function.BinaryOperator;
 
 public enum FooEnum {
 
@@ -12,9 +13,10 @@ public enum FooEnum {
 
 	private final String symbol;
 
-	private final BiFunction<Integer, Integer, Integer> function;
+	// BiFunction<Integer, Integer, Integer>
+	private final BinaryOperator<Integer> function;
 
-	FooEnum(String symbol, BiFunction<Integer, Integer, Integer> function) {
+	FooEnum(String symbol, BinaryOperator<Integer> function) {
 		this.symbol = symbol;
 		this.function = function;
 	}
